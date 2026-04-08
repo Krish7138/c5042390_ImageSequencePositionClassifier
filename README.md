@@ -2,7 +2,7 @@
 
 A deep learning project that tackles the challenging task of predicting an image's position (1-5) within a sequential story using Convolutional Neural Networks (CNNs) built with PyTorch.
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - Introduction
 - Problem Statement
@@ -14,7 +14,7 @@ A deep learning project that tackles the challenging task of predicting an image
 - Results
 - Key Findings
 
-## 🎯 Introduction
+##  Introduction
 
 This project explores whether **static visual features alone** can encode temporal sequence information in narrative stories. Unlike text-based approaches that can rely on explicit temporal markers (e.g., "first," "then," "finally"), this research investigates if CNNs can learn to identify an image's position in a story sequence purely from visual cues.
 
@@ -24,7 +24,7 @@ This project explores whether **static visual features alone** can encode tempor
 - Model capacity (filter counts)
 - Architectural choices (kernel sizes, batch normalization)
 
-## 🔍 Problem Statement
+##  Problem Statement
 
 ### Task Definition
 
@@ -45,7 +45,7 @@ Given a single image from a 5-frame story sequence, predict its position (1, 2, 
 - **Classes**: 5 positions (perfectly balanced - 300 samples per class)
 - **Image Size**: Resized to 32×64 pixels for efficient training
 
-## 💡 Solution Approach
+##  Solution Approach
 
 ### Architecture: 3-Layer CNN
 
@@ -86,7 +86,7 @@ Output (5 classes)
    - Training/Validation Accuracy
    - Loss Gap (overfitting detection)
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 krish/
@@ -115,7 +115,7 @@ krish/
 │   └── Analysis_Answers.txt             # Viva preparation answers
 ```
 
-## 🚀 Installation
+##  Installation
 
 ### Prerequisites
 
@@ -137,7 +137,7 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## 🎮 Usage
+##  Usage
 
 ### Quick Start
 
@@ -160,7 +160,7 @@ This will:
 
 For interactive exploration, open `DNN_Reassessment_Complete.ipynb` in Jupyter or Google Colab and run cells sequentially.
 
-## 🔬 Experiments
+##  Experiments
 
 Five ablation studies were conducted to understand model behavior:
 
@@ -172,17 +172,17 @@ Five ablation studies were conducted to understand model behavior:
 | **4. Filters=64**  | filters=64 vs 32             | Double model capacity                  |
 | **5. BatchNorm**   | Add batch normalization      | Gradient stabilization                 |
 
-## 📊 Results
+##  Results
 
 ### Performance Summary
 
 | Experiment     | Train Acc | Val Acc       | Train Loss | Val Loss | Loss Gap     |
 | -------------- | --------- | ------------- | ---------- | -------- | ------------ |
-| 1. Dropout=0.3 | 19.58%    | **22.00%** ⭐ | 1.610      | 1.609    | -0.001       |
+| 1. Dropout=0.3 | 19.58%    | **22.00%**    | 1.610      | 1.609    | -0.001       |
 | 2. No Dropout  | 22.67%    | 15.00%        | 1.609      | 1.615    | 0.006        |
 | 3. Kernel=5    | 20.50%    | 16.33%        | 1.609      | 1.615    | 0.007        |
 | 4. Filters=64  | 21.67%    | 19.67%        | 1.608      | 1.613    | 0.005        |
-| 5. BatchNorm   | 36.50%    | 16.67%        | 1.465      | 1.698    | **0.234** ⚠️ |
+| 5. BatchNorm   | 36.50%    | 16.67%        | 1.465      | 1.698    | **0.234**    |
 
 **Random Baseline**: 20% (5-class classification)
 
@@ -195,7 +195,7 @@ All plots are automatically saved to the `Results/` directory:
 - Final accuracy bar charts
 - Overfitting detection plots
 
-## 🔑 Key Findings
+##  Key Findings
 
 ### 1. Task Difficulty
 
